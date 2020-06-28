@@ -1,0 +1,30 @@
+stages:
+- name: Build
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: "npm install                                                                                                                                                                          \nnpm
+        run-script build                                                                                                                                                                 \n"
+- name: Publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: nascis:${CICD_EXECUTION_SEQUENCE}
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: .deployment.yaml
+timeout: 60
+branch: {}
+notification:
+  recipients:
+  - recipient: contact@nascis.fr
+    notifier: c-2qtw9:n-b2qj5
+  condition:
+  - Success
+  - Changed
+  - Failed

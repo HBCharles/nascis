@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nascis
+spec:
+  selector:
+    app: nascis
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: nascis
+    namespace: nascis
+    labels:
+      app: nascis
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+       app: nascis
+    template:
+      metadata:
+        labels:
+          app: nascis
+      spec:
+        imagePullSecrets:
+        - name: pipeline-docker-registry 
+        containers:
+        - name: nascis
+          image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+          ports:
+            - containerPort: 80

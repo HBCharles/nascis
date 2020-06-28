@@ -1,0 +1,145 @@
+/* global vars */
+
+:root {
+  font-size: 16px;
+  font-family: Montserrat,sans-serif;
+}
+
+/* mobile format */
+@media screen and (max-width: 32em), (max-height: 24em){
+  :root {
+    font-size: 8px;
+  }
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.listOffres {
+  position: absolute;
+  right: 0.1rem;
+  bottom: 0.1rem;
+}
+
+.listOffres img {
+  width: 80px;
+  height: 80px;
+}
+
+#Home {
+  position: absolute;
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+  margin: 2rem;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2rem;
+}
+
+#Home .content{
+  position: absolute;
+  z-index: 10;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#Home .content .title{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50%;
+  width: 100%;
+}
+#Home .content .title h1{
+  font-size: 10rem;
+  margin: 0;
+    margin-bottom: -1rem;
+    margin-left: -0.8rem;
+}
+#Home .content .title h2{
+  font: 400 3.5rem/1 Montserrat,sans-serif;
+  margin: 0;
+}
+#Home .content .services{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: top;
+  height: 50%;
+}
+
+#Home .content .services svg{
+  height: 4rem;
+  margin-top: 3rem;
+  margin-right: 0.5rem;
+}
+
+
+
+
+#Footer {
+    line-height: 2rem;
+    text-transform: uppercase;
+    position: absolute;
+  font-size: 0.8rem;
+  bottom: 0;
+  left: 2rem;
+}
+/* desktop format */
+/* @media screen and (min-width:64em) and (min-height:32em){
+} */
+
+/* mobile/tablet format */
+/* @media screen and (max-width:64em) and (min-width:32em), (max-height: 32em){
+}    */
+
+/* mobile format */
+/* @media screen and (max-width: 32em), (max-height: 24em){
+} */
+
+/* Edge */
+/* desktop format */
+/* @media screen and (min-width:64em) and (min-height:32em){
+} */
+
+/* mobile/tablet format */
+/* @media screen and (max-width:64em) and (min-width:32em), (max-height: 32em){
+} */
+
+/* mobile format */
+/* @media screen and (max-width: 32em), (max-height: 24em){
+} */
+
+/* IE 11 */
+/* @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+} */
