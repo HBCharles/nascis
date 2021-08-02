@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './sections/about';
 import Footer from './sections/footer';
+import Projects from './sections/projects';
 import { Helmet } from "react-helmet";
 //import 'semantic-ui-css/semantic-ui-css'
 
@@ -19,7 +20,6 @@ const App = () => (
 			    <link rel="apple-touch-icon" href="https://nascis.fr/nascis.png" />
 			    <link rel="apple-touch-icon" sizes="72x72" href="https://nascis.fr/nascis.png" />
 			</Helmet>
-        <About />
         <Footer />
     </React.Fragment>
 );
