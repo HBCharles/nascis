@@ -23,7 +23,7 @@ branch: {}
 notification:
   recipients:
   - recipient: contact@nascis.fr
-    notifier: c-2qtw9:n-b2qj5
+    notifier: local:n-t9h6b
   condition:
   - Success
   - Changed
