@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: fleet-simple-app
+  name: nascis
   labels:
     app.kubernetes.io/name: nascis
 spec:
